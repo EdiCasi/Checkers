@@ -1,0 +1,22 @@
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.exe
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.deps.json
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.runtimeconfig.json
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.runtimeconfig.dev.json
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.dll
+C:\Users\Edi\source\repos\Dame 2\Dame 2\bin\Debug\netcoreapp3.1\Dame 2.pdb
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\MainWindow.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\Board.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\App.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2_MarkupCompile.cache
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2_MarkupCompile.lref
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\MainWindow.baml
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\Board.baml
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.g.resources
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.AssemblyInfoInputs.cache
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.AssemblyInfo.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.csproj.CoreCompileInputs.cache
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.dll
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.pdb
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.genruntimeconfig.cache
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.csprojAssemblyReference.cache

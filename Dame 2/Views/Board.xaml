@@ -1,0 +1,47 @@
+﻿<Page x:Class="Dame_2.Views.Board"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local1="clr-namespace:Dame_2.ViewModels"
+      mc:Ignorable="d" 
+      d:DesignHeight="600" d:DesignWidth="600"
+      Title="Board"
+      Background="Wheat">
+
+    <Page.DataContext>
+        <local1:GameVM/>
+    </Page.DataContext>
+    
+    <ItemsControl Name="grid" ItemsSource="{Binding GameBoard}"
+                  VerticalAlignment="Center" Height="600" Width="600">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <ItemsControl ItemsSource="{Binding}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" />
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate>
+                            <Border Width="75" Height="75" 
+                                    BorderThickness="2" BorderBrush="Black">
+                                <Button Command="{Binding ClickCommand}"
+                                        CommandParameter="{Binding SimpleSquare}">
+                                    <Button.Template>
+                                        <ControlTemplate>
+                                            <Image 
+                                                Source="{Binding SimpleSquare.Image}" 
+                                                Stretch="UniformToFill" />
+                                        </ControlTemplate>
+                                    </Button.Template>
+                                </Button>
+                            </Border>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+    </ItemsControl>
+</Page>
