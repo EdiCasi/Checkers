@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="Dame_2.Views.SideBarView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Dame_2.Views"
+             mc:Ignorable="d" 
+             d:DesignHeight="640" d:DesignWidth="100"
+             Background="#0066cc">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush 
+                ImageSource="C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\wood.jpg" 
+                Stretch="UniformToFill"/>
+        </Grid.Background>
+        <StackPanel
+                HorizontalAlignment="Center"  
+                VerticalAlignment="Top">
+        <Button x:Name="ResetButton"
+                Content="Reset" 
+                Width="80"
+                Height="40"
+                Margin="0,10,0,0" Click="ResetButton_Click"/>
+        <Button x:Name="RestoreButton"
+                Content="Restore" 
+                Width="80"
+                Height="40"
+                Margin="0,10,0,0" Click="RestoreButton_Click"/>
+        <Button x:Name="SaveButton"
+                Content="Save" 
+                Width="80"
+                Height="40"
+                Margin="0,10,0,0" Click="SaveButton_Click"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

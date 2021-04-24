@@ -1,9 +1,6 @@
-﻿using Dame_2.Views;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -14,19 +11,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Dame_2
+namespace Dame_2.Views
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for BlackWins.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class BlackWins : Page
     {
-        public static Board board { get; set; }
-        public MainWindow()
+        public BlackWins()
         {
             InitializeComponent();
-            board = new Board();
-            boardFrame.NavigationService.Navigate(board);
         }
     }
 }

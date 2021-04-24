@@ -20,3 +20,9 @@ C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.pdb
 C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.genruntimeconfig.cache
 C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\GeneratedInternalTypeHelper.g.cs
 C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Dame 2.csprojAssemblyReference.cache
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\SideBarView.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\SideBarView.baml
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\BlackWins.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\RedWins.g.cs
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\BlackWins.baml
+C:\Users\Edi\source\repos\Dame 2\Dame 2\obj\Debug\netcoreapp3.1\Views\RedWins.baml

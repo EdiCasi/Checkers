@@ -9,24 +9,20 @@ namespace Dame_2.ViewModels
 {
     class GameStatusVM
     {
-        private GameStatus gameStatus;
 
-        public GameStatus GameStatus
+
+        public GameStatus Status { get; set; }
+
+        public GameStatusVM(string path)
         {
-            get { return gameStatus; }
-            set { gameStatus = value; }
+            Status = ReadGameStatus(path);
         }
 
-
-        public GameStatusVM()
-        {
-            gameStatus = new GameStatus();
-            ReadGame(@"C:/Users/Edi/source/repos/Dame 2/Dame 2/Resources/SatrtGame.txt");
-        }
-
-        public void ReadGame(string path)
+        public GameStatus ReadGameStatus(string path)
         {
             TextReader reader = File.OpenText(path);
+
+            GameStatus status = new GameStatus();
 
             string text = reader.ReadLine();
 
@@ -39,10 +35,28 @@ namespace Dame_2.ViewModels
 
             for (int index = 0; index < bits.Length; index++)
             {
-                integerList.Add(int.Parse(bits[index]));
+                if (bits[index] != "")
+                    integerList.Add(int.Parse(bits[index]));
             }
 
-            gameStatus.GameBoard = integerList;
+            text = reader.ReadLine();
+
+            bits = text.Split(' ');
+
+            if (bits.Length < 3)
+                throw new Exception("nu e bine");
+
+            status.CurrentPlayer = int.Parse(bits[0]);
+
+            status.NumberOfRedPieces = int.Parse(bits[1]);
+
+            status.NumberOfBlackPieces = int.Parse(bits[2]);
+
+
+            status.GameBoard = integerList;
+
+            return status;
         }
+
     }
 }

@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
 C:\Users\Edi\source\repos\Dame 2\Dame 2\App.xaml
-2813978844
+51384512460
 
-141595104901
+17-608156164
 1921654412462
-MainWindow.xaml;Views\Board.xaml;
+MainWindow.xaml;Views\BlackWins.xaml;Views\Board.xaml;Views\RedWins.xaml;Views\SideBarView.xaml;
 
 False
 

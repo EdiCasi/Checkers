@@ -7,7 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Views\BlackWins.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="Views\Board.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\RedWins.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Views\SideBarView.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -15,7 +24,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="Views\BlackWins.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\Board.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\RedWins.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\SideBarView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

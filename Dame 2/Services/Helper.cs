@@ -12,17 +12,11 @@ namespace Dame_2.Services
 {
     class Helper
     {
-        private static Watch watch = new Watch();
-
-        private static GameStatusVM gameStatusVM = new GameStatusVM();
-        public static Square CurrentCell { get; set; }
-        public static Square PreviousCell { get; set; }
-        public static ObservableCollection<ObservableCollection<Square>> InitGameBoard()
+        public static ObservableCollection<ObservableCollection<Square>> ConvertIntegerMatrixToSquareMatrix(List<int> game_board)
         {
-            ObservableCollection<ObservableCollection<Square>> gameBoard = new ObservableCollection<ObservableCollection<Square>>();
+            Watch watch = new Watch();
 
-            List<int> game_board = new List<int>();
-            game_board = gameStatusVM.GameStatus.GameBoard;
+            ObservableCollection<ObservableCollection<Square>> gameBoard = new ObservableCollection<ObservableCollection<Square>>();
 
             for (int line = 0; line < GameVM.BOARD_DIMMENSION; line++)
             {
@@ -33,8 +27,29 @@ namespace Dame_2.Services
                 }
                 gameBoard.Add(row);
             }
-
             return gameBoard;
         }
+        public static ObservableCollection<ObservableCollection<SquareVM>> 
+            CellBoardToCellVMBoard(ObservableCollection<ObservableCollection<Square>> board, GameBusinessLogic bl)
+        {
+            ObservableCollection<ObservableCollection<SquareVM>> result = new ObservableCollection<ObservableCollection<SquareVM>>();
+            for (int line = 0; line < GameVM.BOARD_DIMMENSION; line++)
+            {
+                ObservableCollection<SquareVM> row = new ObservableCollection<SquareVM>();
+                for (int column = 0; column < GameVM.BOARD_DIMMENSION; column++)
+                {
+                    SquareVM squareVM = new SquareVM(board[line][column], bl);
+                    row.Add(squareVM);
+                }
+                result.Add(row);
+            }
+            return result;
+        }
+
+
+
+
+
+
     }
 }

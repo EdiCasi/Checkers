@@ -3,39 +3,100 @@ using Dame_2.Services;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Text;
+using Type = Dame_2.Models.Type;
 
 namespace Dame_2.ViewModels
 {
     class GameVM
     {
-        private GameBusinessLogic bl;
+        private static GameBusinessLogic bl;
 
         public static int BOARD_DIMMENSION = 8;
 
+        public static GameStatusVM InitialGameStatus { get; set; }
+
+        public static ObservableCollection<ObservableCollection<SquareVM>> GameBoard { get; set; }
+        public static ObservableCollection<ObservableCollection<Square>> Board { get; set; }
+
         public GameVM()
         {
-            ObservableCollection<ObservableCollection<Square>> board = Helper.InitGameBoard();
-            bl = new GameBusinessLogic(board);
-            GameBoard = CellBoardToCellVMBoard(board);
+            InitialGameStatus = new GameStatusVM(@"C:/Users/Edi/source/repos/Dame 2/Dame 2/Resources/SatrtGame.txt");
+
+            Board = Helper.ConvertIntegerMatrixToSquareMatrix(InitialGameStatus.Status.GameBoard);
+
+            bl = new GameBusinessLogic(Board);
+
+            GameBusinessLogic.CurrentPlayer = (Type)InitialGameStatus.Status.CurrentPlayer;
+
+            GameBusinessLogic.NumberOfRedPieces = InitialGameStatus.Status.NumberOfRedPieces;
+
+            GameBusinessLogic.NumberOfBlackPieces = InitialGameStatus.Status.NumberOfBlackPieces;
+
+            GameBoard = Helper.CellBoardToCellVMBoard(Board, bl);
         }
 
-        private ObservableCollection<ObservableCollection<SquareVM>> CellBoardToCellVMBoard(ObservableCollection<ObservableCollection<Square>> board)
+        public static void ResetGame()
         {
-            ObservableCollection<ObservableCollection<SquareVM>> result = new ObservableCollection<ObservableCollection<SquareVM>>();
+            Board = Helper.ConvertIntegerMatrixToSquareMatrix(InitialGameStatus.Status.GameBoard);
+
+            bl = new GameBusinessLogic(Board);
+
             for (int line = 0; line < BOARD_DIMMENSION; line++)
             {
-                ObservableCollection<SquareVM> row = new ObservableCollection<SquareVM>();
                 for (int column = 0; column < BOARD_DIMMENSION; column++)
                 {
-                    SquareVM squareVM = new SquareVM(board[line][column], bl);
-                    row.Add(squareVM);
+                    GameBoard[line][column].SimpleSquare.Type = Board[line][column].Type;
                 }
-                result.Add(row);
             }
-            return result;
+            GameBusinessLogic.CurrentPlayer = (Type)InitialGameStatus.Status.CurrentPlayer;
+
+            GameBusinessLogic.NumberOfRedPieces = InitialGameStatus.Status.NumberOfRedPieces;
+
+            GameBusinessLogic.NumberOfBlackPieces = InitialGameStatus.Status.NumberOfBlackPieces;
         }
 
-        public ObservableCollection<ObservableCollection<SquareVM>> GameBoard { get; set; }
+        public static void RestoreGame(string path)
+        {
+            GameStatusVM status = new GameStatusVM(path);
+
+            Board = Helper.ConvertIntegerMatrixToSquareMatrix(status.Status.GameBoard);
+
+            for (int line = 0; line < BOARD_DIMMENSION; line++)
+            {
+                for (int column = 0; column < BOARD_DIMMENSION; column++)
+                {
+                    GameBoard[line][column].SimpleSquare.Type = Board[line][column].Type;
+                }
+            }
+            GameBusinessLogic.CurrentPlayer = (Type)status.Status.CurrentPlayer;
+
+            GameBusinessLogic.NumberOfRedPieces = status.Status.NumberOfRedPieces;
+
+            GameBusinessLogic.NumberOfBlackPieces = status.Status.NumberOfBlackPieces;
+        }
+
+        public static void Save(string path)
+        {
+            StreamWriter sw = new StreamWriter(path);
+            string stringLine = "";
+            for (int line = 0; line < BOARD_DIMMENSION; line++)
+            {
+                for (int column = 0; column < BOARD_DIMMENSION; column++)
+                {
+                    stringLine += (int)GameBoard[line][column].SimpleSquare.Type + " ";
+                }
+            }
+            sw.WriteLine(stringLine);
+            stringLine = "";
+
+            stringLine += (int)GameBusinessLogic.CurrentPlayer + " ";
+            stringLine += GameBusinessLogic.NumberOfRedPieces + " ";
+            stringLine += GameBusinessLogic.NumberOfBlackPieces;
+
+            sw.WriteLine(stringLine);
+            sw.Close();
+        }
     }
 }
