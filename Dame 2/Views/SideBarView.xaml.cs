@@ -20,6 +20,8 @@ namespace Dame_2.Views
         public SideBarView()
         {
             InitializeComponent();
+
+            backgroundImage.ImageSource = new BitmapImage(new Uri(System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/wood.jpg"));
         }
 
         private void ResetButton_Click(object sender, RoutedEventArgs e)

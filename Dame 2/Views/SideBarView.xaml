@@ -9,8 +9,7 @@
              Background="#0066cc">
     <Grid>
         <Grid.Background>
-            <ImageBrush 
-                ImageSource="C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\wood.jpg" 
+            <ImageBrush x:Name="backgroundImage"
                 Stretch="UniformToFill"/>
         </Grid.Background>
         <StackPanel
