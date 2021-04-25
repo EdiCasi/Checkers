@@ -47,10 +47,9 @@ namespace Dame_2.Views
 
         private void SaveButton_Click(object sender, RoutedEventArgs e)
         {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.Filter = "Text|*.txt|All|*.*";
+            SaveFileDialog openFileDialog = new SaveFileDialog();
             if (openFileDialog.ShowDialog() == true)
-                GameVM.Save(openFileDialog.FileName);
+                GameVM.Save(openFileDialog.FileName + ".txt");
             MainWindow parentWindow = Window.GetWindow(this) as MainWindow;
             if (parentWindow != null)
             {
