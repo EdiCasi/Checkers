@@ -26,18 +26,18 @@ namespace Dame_2.Models
         {
             filePaths = new Dictionary<Type, string>()
             {
-                { Type.EMPTY_BLACK, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\emptyBalck.png" },
-                { Type.EMPTY_WHITE, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\emptyWhite.png" },
-                { Type.BLACK, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\black.png" },
-                { Type.RED, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\red.png" },
-                { Type.RED_SELECTED, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\redSelected.png" },
-                { Type.BLACK_SELECTED, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\blackSelected.png" },
-                { Type.GREEN, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\green.png" },
-                { Type.TAKE, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\take.png" },
-                { Type.BLACK_KING, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\blackKing.png" },
-                { Type.RED_KING, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\redKing.png" },
-                { Type.BLACK_KING_SELECTED, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\blackKingSelected.png" },
-                { Type.RED_KING_SELECTED, @"C:\Users\Edi\source\repos\Dame 2\Dame 2\Resources\redKingSelected.png" }
+                { Type.EMPTY_BLACK, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/emptyBalck.png" },
+                { Type.EMPTY_WHITE, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/emptyWhite.png" },
+                { Type.BLACK, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/black.png" },
+                { Type.RED, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/red.png" },
+                { Type.RED_SELECTED, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/redSelected.png" },
+                { Type.BLACK_SELECTED, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/blackSelected.png" },
+                { Type.GREEN, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/green.png" },
+                { Type.TAKE, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/take.png" },
+                { Type.BLACK_KING, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/blackKing.png" },
+                { Type.RED_KING, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/redKing.png" },
+                { Type.BLACK_KING_SELECTED, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/blackKingSelected.png" },
+                { Type.RED_KING_SELECTED, System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/redKingSelected.png" }
             };
         }
         public static string GetPath(int value)

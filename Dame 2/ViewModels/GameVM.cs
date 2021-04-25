@@ -22,7 +22,7 @@ namespace Dame_2.ViewModels
 
         public GameVM()
         {
-            InitialGameStatus = new GameStatusVM(@"C:/Users/Edi/source/repos/Dame 2/Dame 2/Resources/SatrtGame.txt");
+            InitialGameStatus = new GameStatusVM(System.IO.Directory.GetParent(Environment.CurrentDirectory).Parent.Parent.FullName + "/Resources/SatrtGame.txt");
 
             Board = Helper.ConvertIntegerMatrixToSquareMatrix(InitialGameStatus.Status.GameBoard);
 
